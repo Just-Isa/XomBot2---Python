@@ -65,4 +65,4 @@ class MyClient(discord.Client):
         msgs.write("\nDeleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
 
 client = MyClient()
-client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.SgS77u8ESs24ATwzj5mYUhTcyFg")
+client.run("TOKEN")
