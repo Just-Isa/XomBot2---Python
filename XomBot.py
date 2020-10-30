@@ -45,7 +45,7 @@ class MyClient(discord.Client):
                 await message.author.send("Thanks bud 👌🏻😂🔥")
 
             elif "berdux" in str(message.content).lower():
-                await message.author.send("Xomdux:741251152120643599")
+                await message.add_reaction("Xomdux:741251152120643599")
 
             elif "masku" in str(message.content).lower():
                 await message.add_reaction("🇲")
@@ -61,8 +61,7 @@ class MyClient(discord.Client):
                 await message.channel.send(file=File("oof.mp3"))
 
     async def on_message_delete(self, message):
-        msgs = open("Deleted Messages.txt", "a")
-        msgs.write("\nDeleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
+        print("Deleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
 
 client = MyClient()
-client.run("TOKEN")
+client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.SgS77u8ESs24ATwzj5mYUhTcyFg")
