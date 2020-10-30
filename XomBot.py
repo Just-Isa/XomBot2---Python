@@ -64,4 +64,4 @@ class MyClient(discord.Client):
         print("Deleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
 
 client = MyClient()
-client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.SgS77u8ESs24ATwzj5mYUhTcyFg")
+client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.i1TGAqAc0SQeV-JsCa2Fvh0jsBA")
