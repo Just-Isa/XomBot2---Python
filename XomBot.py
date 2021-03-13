@@ -95,4 +95,4 @@ class MyClient(discord.Client):
         text_file.close()
 
 client = MyClient()
-client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.vbNiLS_kdzSiu4laAg1IrwlEFRA")
+client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.jmHaLkxISX7rdHuCPXndZZEThlU")
