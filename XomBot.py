@@ -29,23 +29,47 @@ class MyClient(discord.Client):
 
         elif message.content.startswith("~flip"):
             flip = random.randint(0, 8)
-            if(flip == 0):
+            if(flip <= 4):
                 await message.channel.send("heads")
             else:
                 await message.channel.send("tails")
 
-        else:
-            if "xom" in str(message.content).lower():
-                await message.add_reaction("xom:768629261052411904")
+        elif message.content.startswith("~XomCry"):
+            responses = [
+                "You weren't ever perfect.\n You just had this self -\n That couldn't be plucked from a jar on the shelf.\n I can't even say just for sure what it was -\n Just something.\n Just something.\n Just something, because -\n You weren't ever perfect.\n You just had this style -\n Of making me laugh at your dumb little smile.\n I can't even say what it happened to be -\n Just something.\n Just something.\n Just something, you see -\n You weren't ever perfect.\n You just had this way -\n Of making me feel like it might be okay.\n I can't even say why I'm making this call.\n I miss you.\n I miss you.\n I miss you.\n \n That's all",
+                "https://www.youtube.com/watch?v=ErmZRsCIUsE",
+                "https://www.youtube.com/watch?v=Pt21dU5Pu8g",
+                "https://www.youtube.com/watch?v=igVLTttJDnk",
+                "https://www.youtube.com/watch?v=hYAQtEs2Img"
+            ]
+            await message.channel.send(random.choice(responses))
 
-            elif "tekken" in str(message.content).lower():
+        elif message.content.startswith("~8Xom"):
+            responses = [
+                'Probably man idk',
+                'If MoonMan blesses it',
+                'Murray says just block it, aka. No.',
+                'Donut says youre a retard',
+                'Actually, yeah. Sure. I think so,',
+                'I think that its possible, but im just a racist bot, so yknow...',
+                'Femnomenal says no.',
+                'Sometimes its okay to not ask questions you fucking idiot',
+                'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAshutthefuckupAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+                'It depends, ask my dad',
+                'https://media.discordapp.net/attachments/797474866378440704/819865255889993738/unknown.png',
+                'Sure.',
+                'Yeah.',
+                'Nah.',
+                'I dont think so, maybe in the next life though.'
+            ]
+            await message.channel.send(random.choice(responses))
+
+        else:
+            if "tekken" in str(message.content).lower():
                 await message.add_reaction("kms2:709460300096602112")
 
             elif "good bot" in str(message.content).lower() or "nice bot" in str(message.content).lower():
                 await message.author.send("Thanks bud 👌🏻😂🔥")
-
-            elif "berdux" in str(message.content).lower():
-                await message.add_reaction("Xomdux:741251152120643599")
 
             elif "masku" in str(message.content).lower():
                 await message.add_reaction("🇲")
@@ -57,11 +81,18 @@ class MyClient(discord.Client):
             elif ":((" in str(message.content):
                 await message.channel.send("https://i.pinimg.com/originals/e3/82/01/e38201822636168d1afcf07de2bed01f.png")
 
-            elif "oof" in str(message.content):
-                await message.channel.send(file=File("oof.mp3"))
+            elif "~XomHelp" in str(message.content):
+                await message.channel.send("Ill dm you my commands you bitch")
+                await message.author.send("```md\n\n# You have these options:\n\n ~XomCry --> (WIP) \n\n ~8Xom --> Like an 8ball just with ME :D \n\n ~flip --> like a coinflip \n\n ~cock--> To measure your penis size (WIP), \n\n And there is some commands that are just for specific servers. So good luck finding those out lmao.\n\n # If you think you have some cool ideas mr isa up :) \n```")
 
+            elif "xom" in str(message.content).lower():
+                await message.add_reaction("xom:768629261052411904")
+                
     async def on_message_delete(self, message):
+        text_file = open("Deleted Messages.txt", "w")
+        n = text_file.write("Deleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
         print("Deleted Message: " + message.content + " , Deleted by: " + str(message.author) + " , in the " + str(message.channel) + " channel")
+        text_file.close()
 
 client = MyClient()
-client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.i1TGAqAc0SQeV-JsCa2Fvh0jsBA")
+client.run("NzY4NTUyMTgyMzIwMjAxNzI5.X5CH_w.vbNiLS_kdzSiu4laAg1IrwlEFRA")
